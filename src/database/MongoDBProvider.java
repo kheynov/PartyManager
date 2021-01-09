@@ -11,8 +11,8 @@ import org.bson.codecs.pojo.PojoCodecProvider;
 public class MongoDBProvider {
 
 
-    private final String databaseName = "Test";
-    private final String collectionName = "test";
+    private final String databaseName = "PartyManager";
+    private final String collectionName = "data";
 
     private final MongoCollection<Person> collection;
     private static MongoDBProvider instance;

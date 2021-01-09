@@ -28,12 +28,14 @@ public class ClientHandler implements Runnable {
     public void run() {
         while (true) {
             if (inStream.hasNext()) {
-                Request request = new Request(inStream.next());
+                String inputMessage = inStream.next();
+                System.out.println(inputMessage);
+                Request request = new Request(inputMessage);
                 Response response = new Response();
                 switch (request.getAction()) {
                     case ADD_USER -> {
                         try {
-                            mongoDBProvider.insertPersonData(new Person(request.getTagID(), request.getName(), request.getBalance()));
+                            mongoDBProvider.insertPersonData(new Person(request.getTagID(), request.getName(), request.getBalance(), request.getBalance()));
                             response.setResponseStatus(Response.Status.OK);
                         } catch (Exception e) {
                             e.printStackTrace();

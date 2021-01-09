@@ -13,8 +13,9 @@ public class ClientManager implements Runnable {
     public void run() {
         try {
             serverSocket = new ServerSocket(port);
+            System.out.println("Server started");
             while (true) {
-                System.out.println("Server started");
+                System.out.println("Waiting for client");
                 clientSocket = serverSocket.accept();
                 System.out.println("Client connected");
                 ClientHandler clientHandler = new ClientHandler(clientSocket);

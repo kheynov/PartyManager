@@ -41,6 +41,7 @@ public class Response {
             JSONArray array = new JSONArray();
             array.add(person.getName());
             array.add(person.getBalance());
+            array.add(person.getRating());
             object.put("person", array);
         }
         return object.toJSONString();
