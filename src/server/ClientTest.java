@@ -16,6 +16,7 @@ public class ClientTest {
     private static String firstRequest = "{\"action\":\"ADD_USER\",\"tagID\":\"1414\",\"name\":\"Alex\",\"balance\":\"213\",\"rating\":\"213\"}";
     private static String secondRequest = "{\"action\":\"GET_USER\",\"tagID\":\"1414\"}";
     private static String thirdRequest = "{\"action\":\"DELETE_USER\",\"tagID\":\"1414\"}";
+
     private static String fourthRequest = "{\"action\":\"EDIT_BALANCE\",\"tagID\":\"1414\",\"balance\":\"2100\"}";
     public static String fifthRequest = "{\"action\":\"EDIT_NAME\",\"tagID\":\"1414\",\"name\":\"Alexandra\"}";
 
